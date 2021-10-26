@@ -5,10 +5,10 @@ A course to create single page application with React and Node.js, hosted by Uni
 : fundamentals
 
 # part1
-courseinfo: best practices
-unicafe: state
-anecdotes: state+
+courseinfo: best practices  
+unicafe: state  
+anecdotes: state+  
 
 # part2
-courseinfo: rendering collection
-phonebook: making forms, connecting database
+courseinfo: rendering collection  
+phonebook: making forms, connecting database  
