@@ -1,6 +1,7 @@
 const Persons = ({persons}) => {
+    // console.log(persons)
     return (
-        <li>{persons.content}</li>
+        <li key={persons.id}>{persons.name} {persons.number}</li>
     )
 }
 
