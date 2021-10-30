@@ -1,20 +1,20 @@
 # Fullstack Open 2021
 A course to create single page application with React and Node.js, hosted by University of Helsinki
 
-# part0
+### part0
 : fundamentals
   
-# part1
+### part1
 courseinfo: best practices  
 unicafe: state  
 anecdotes: state+  
   
-# part2
+### part2
 courseinfo: rendering collection  
 countries: filtering output  
 phonebook: making forms, CRUD-ing database, filtering output, styling CSS
   
-# part 3
+### part 3
 node.js and express  
 deploy app to internet  
 saving data to MongoDB  
