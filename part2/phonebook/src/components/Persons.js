@@ -1,7 +1,12 @@
-const Persons = ({persons}) => {
-    // console.log(persons)
+const Persons = ({persons,deletePerson}) => {
+    console.log("persons",persons)
     return (
-        <li key={persons.id}>{persons.name} {persons.number}</li>
+        <div>
+        <li className='note' key={persons.id}>
+            {persons.name} {persons.number}
+            <button onClick={deletePerson}>delete</button>
+        </li> 
+        </div>
     )
 }
 
