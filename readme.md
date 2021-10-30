@@ -15,7 +15,7 @@ countries: filtering output
 phonebook: making forms, CRUD-ing database, filtering output, styling CSS
   
 # part 3
-node.js and express
-deploy app to internet
-saving data to MongoDB
-validation and ESlint
+node.js and express  
+deploy app to internet  
+saving data to MongoDB  
+validation and ESlint  
