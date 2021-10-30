@@ -1,5 +1,5 @@
 # Fullstack Open 2021
-A course to create single page application with React and Node.js, hosted by University of Helsinki
+A 12-part course to create single page application with React and Node.js, hosted by University of Helsinki.
 
 ### part0
 : fundamentals
