@@ -16,7 +16,7 @@ const Footer = () => {
   }
   return (
     <div style={footerStyle}>
-      <em>Phonebook by [c6z3h](https://github.com/c6z3h)</em>
+      <em>Phonebook by <a href="https://github.com/c6z3h">c6z3h</a></em>
     </div>
   )
 }
