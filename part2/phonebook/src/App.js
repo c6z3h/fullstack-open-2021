@@ -9,10 +9,10 @@ import './index.css'
 
 const Footer = () => {
   const footerStyle = {
-    color: 'turquoise',
-    background: 'maroon',
+    color: 'blue',
+    background: 'gray',
     fontStyle: 'italic',
-    fontSize: 25
+    fontSize: 25,
   }
   return (
     <div style={footerStyle}>
@@ -27,7 +27,9 @@ const App = () => {
   const hook = () => {
     personService
     .getAll()
-    .then(allPersons => {setPersons(allPersons)
+    .then(allPersons => {
+      console.log(`this is allPersons: ${allPersons}`)
+      setPersons(allPersons)
     })
   }
 
@@ -64,6 +66,12 @@ const App = () => {
     if (personsArray.includes(`${newName}`.toLowerCase())){
         if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)){
           // if user says "OK" and not "cancel"
+          // TODO: bugfix - no re-render and no update
+          /* ISSUE: lower-case name input updates
+          1. Tried obtaining index of lowercase personsArray, passing it to normal-case persons array.
+          `TypeError: 4 is not a function`
+          2. Now... Let us do it without considering lower-cases. Anna !== anna now.
+          */
           const updateMan = persons.filter(person => person.name === `${newName}`)
           console.log("updateMan is", updateMan[0])
           console.log("updateMan.id is", updateMan[0].id)
@@ -79,13 +87,13 @@ const App = () => {
               setPersons(persons.filter(p => p.id !== updateMan[0].id))
             })
             .then(newMan => {
-              setPersons(persons.map(person => person.id !== updateMan[0].id ? person : newMan))
+              setPersons(persons.map(person => person.id !== newMan.id ? person : newMan))
+              setNotifMessage(`Updated ${newName}`)
+              setTimeout(() => {
+                setNotifMessage('')
+              }, 5000)
             })
         }
-        setNotifMessage(`Updated ${newName}`)
-        setTimeout(() => {
-          setNotifMessage('')
-        }, 5000)
       } else {
         personService
           .create(personObject)
