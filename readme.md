@@ -1,5 +1,6 @@
 # Fullstack Open 2021
-A 12-part course to create single page application with React and Node.js, hosted by University of Helsinki.
+A 12-part course to create a MERN stack single page application, hosted by University of Helsinki.
+[x] MERN = {MongoDB, Express, React, Node}
 
 ### part0
 : fundamentals
@@ -15,7 +16,6 @@ countries: filtering output
 phonebook: making forms, CRUD-ing database, filtering output, styling CSS
   
 ### part 3
-node.js and express  
-deploy app to internet  
-saving data to MongoDB  
-validation and ESlint  
+phonebook: MERN integration, Heroku, and ESLint  
+
+### part 4
