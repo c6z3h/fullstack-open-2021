@@ -62,7 +62,6 @@ test('POST test', async() => {
     let blog = new Blog(initialBlogs[0])
     try{
     const result = await blog.save()
-    response.status(201).json(result)
     } catch(exception) {
     // next(exception)
     console.log(exception)

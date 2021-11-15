@@ -1,6 +1,6 @@
 const listHelper = require('../utils/list_helper')
 
-describe('most liked', () => {
+describe('basic tests 2', () => {
     const emptyList = []
 
     const listWithOneBlog = [
@@ -33,14 +33,14 @@ describe('most liked', () => {
           }
       ]
   
-    test('when list has no blog, returns 0', () => {
+    test('favourite blog: empty list, returns 0', () => {
       const result = listHelper.favouriteBlog(emptyList)
       expect(result).toEqual(0)
     })
 
-    test('when list has only one blog, equals that', () => {
+    test('favourite blog: list.length === 1', () => {
       const result2 = listHelper.favouriteBlog(listWithOneBlog)
-      console.log(result2)
+      // console.log(result2)
       expect(result2).toEqual(
           {_id: '5a422aa71b54a676234d17f8',
             title: 'Go To Hell',
@@ -51,7 +51,7 @@ describe('most liked', () => {
       })
     })
 
-    test('when list has 2 blog, equals the maxLikes', () => {
+    test('favourite blog: list.length === 2', () => {
       const result3 = listHelper.favouriteBlog(listWithTwoBlog)
       expect(result3).toEqual({
         _id: '5a422aa71b54a676234d17f8',
@@ -61,5 +61,21 @@ describe('most liked', () => {
         likes: 21,
         __v: 0
       })
+    })
+
+    test('total likes: empty list, returns 0', () => {
+      const result = listHelper.totalLikes(emptyList)
+      expect(result).toBe(0)
+    })
+
+    test('total likes: list.length === 1', () => {
+      const result2 = listHelper.totalLikes(listWithOneBlog)
+      // console.log(result2)
+      expect(result2).toBe(5)
+    })
+
+    test('total likes: list.length === 2', () => {
+      const result3 = listHelper.totalLikes(listWithTwoBlog)
+      expect(result3).toBe(26)
     })
   })
