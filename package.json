@@ -1,0 +1,36 @@
+{
+  "name": "fullstack-open-2021",
+  "version": "1.0.0",
+  "description": "A 12-part course to create a MERN stack single page application, hosted by University of Helsinki.\r [x] MERN = {MongoDB, Express, React, Node}",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c6z3h/fullstack-open-2021.git"
+  },
+  "author": "ZH Chua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c6z3h/fullstack-open-2021/issues"
+  },
+  "homepage": "https://github.com/c6z3h/fullstack-open-2021#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
