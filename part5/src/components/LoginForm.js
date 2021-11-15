@@ -1,11 +1,11 @@
 import React from 'react'
 
 const LoginForm = ({
+  username,
+  password,
   handleSubmit,
   handleUsernameChange,
   handlePasswordChange,
-  username,
-  password,
 }) => {
   return (
     <div>

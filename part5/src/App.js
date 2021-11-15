@@ -1,23 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react'
-import Blog from './components/Blog'
-import Notification from './components/Notification'
-import LoginForm from './components/LoginForm'
-import BlogForm from './components/BlogForm'
-import Togglable from './components/Togglable'
 import blogService from './services/blogs'
 import loginService from './services/login'
+import Notification from './components/Notification'
+import LoginForm from './components/LoginForm'
+import Togglable from './components/Togglable'
+import Blog from './components/Blog'
+import BlogForm from './components/BlogForm'
 
 const App = () => {
+  // init
   const [blogs, setBlogs] = useState([])
   const [message, setMessage] = useState(null)
 
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [update, setUpdate] = useState(null)
-
   const [user, setUser] = useState(null)
 
+  const [update, setUpdate] = useState(null)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  
   const blogFromRef = useRef()
+
+  // effects
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(null)
+    }, 5000)
+  }, [message])
 
   useEffect(() => {
     blogService.getAll().then((blogs) => setBlogs(blogs))
@@ -32,12 +40,7 @@ const App = () => {
     }
   }, [])
 
-  useEffect(() => {
-    setTimeout(() => {
-      setMessage(null)
-    }, 5000)
-  }, [message])
-
+  // login handler
   const handleLogin = async (event) => {
     event.preventDefault()
 

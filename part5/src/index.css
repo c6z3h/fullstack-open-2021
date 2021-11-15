@@ -1,10 +1,10 @@
 .notification {
-    background: lightgrey;
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+    background: purple;
+    font-size: 15px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-style: double;
+    border-radius: 7px;
   }
   
   .notification--success {

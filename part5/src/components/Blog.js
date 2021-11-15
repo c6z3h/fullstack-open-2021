@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-const Blog = ({ blog, handleLikes, handleRemoving }) => {
+const Blog = ({ blog, handleRemoving, handleLikes }) => {
   const [showFull, setShowFull] = useState(false)
 
   const blogStyle = {
-    paddingTop: 10,
-    paddingLeft: 2,
-    border: 'solid',
-    borderWidth: 1,
-    marginBottom: 5,
+    // paddingLeft: 2,
+    // paddingTop: 10,
+    border: 'dotted',
+    marginBottom: 8,
+    borderWidth: 6,
   }
 
   const showFullBlog = () => {
